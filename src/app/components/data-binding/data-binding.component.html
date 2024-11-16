@@ -1,0 +1,109 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-12 my-3">
+    <div class="alert alert-primary" role="alert">
+      <p class="fw-bold mb-0">One Way Data binding</p> 
+      </div>
+</div>
+</div>
+
+
+
+<div class="row mb-3">
+    <div class="col-lg-12"><p class="fw-bold text-danger">Interpolation</p> </div>
+    <div class="col-lg-3">{{courseName}}</div>
+<div class="col-lg-3"><input type="{{inputType}}" value="{{courseName}}" placeholder="Enter text"/></div>
+<div class="col-lg-3">{{rollNo}}</div>
+<div class="col-lg-3">{{isIndian}}</div>
+<hr class="mt-3">
+</div>
+
+<div class="row">
+    <div class="col-lg-12"><p class="fw-bold text-danger">Property binding</p></div>
+<div class="col-lg-3">
+    <div [class]="propertyclass">
+    {{courseName}}
+</div>
+</div>
+
+<div class="col-lg-3">
+    <div [class]="propertyclass">{{courseName}}    </div>
+</div>
+<div class="col-lg-3">
+    <input type="text" [value]="courseName" placeholder="Enter text">
+</div>
+<div class="col-lg-3">
+    <input [type]="inputType" [value]="courseName" placeholder="Enter text">
+
+</div>
+<hr class="mt-3">
+
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12"><p class="fw-bold text-danger">Event binding</p></div>
+
+
+<div class="col-lg-3">
+
+<button class="btn btn-danger" (click)="showAlert('Hi i m Event Binding' )">Click Me </button>
+
+</div>
+
+<div class="col-lg-3">
+    {{courseName}}
+    <button class="btn btn-danger" (click)="changeCourseName()">Click Me </button>
+</div>
+<div class="col-lg-3">
+</div>
+<div class="col-lg-3">
+
+</div>
+<hr class="mt-3">
+
+</div>
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-primary" role="alert">
+          <p class="fw-bold mb-0">Two Way Data binding</p> 
+          </div>
+    </div>
+    </div>
+
+
+
+
+
+<div class="row">
+<div class="col-lg-4">
+    <input type="text" class="form-control" [(ngModel)]="courseName">
+</div>
+
+<div class="col-lg-4">
+
+</div>
+
+
+<hr class="mt-3">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
