@@ -1,1 +1,101 @@
-<p>structural-directive works!</p>
+
+<div class="container">
+    <div class="row">
+    
+    
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-primary" role="alert">
+            <h3>what is Structural Directive</h3>
+            <p>In Angular, a Structural Directive is a type of directive that changes the structure of the DOM (Document Object Model) by adding or removing elements based on specific conditions. These directives are responsible for modifying the layout or structure of the view dynamically.
+
+            </p>
+          </div>
+    </div>
+
+
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-secondary" role="alert">
+          <h6> 1. ngIf: Conditionally includes or removes an element from the DOM based on a boolean expression.</h6>
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <div *ngIf="isVisible; else elseBlock"  class="mb-3">
+                    This will only display if isVisible is true.
+                  </div>
+                  
+                  <ng-template #elseBlock>
+                    <div class="mb-3" >
+                      This is displayed when isVisible is false.
+                    </div>
+                  </ng-template>
+                  
+                  <button class="btn btn-primary" (click)="toggleVisibility()">Toggle Visibility</button>
+                  
+              </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-secondary" role="alert">
+          <h6> 2. ngFor: Iterates over a collection and renders a set of elements for each item.</h6>
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <ul>
+                    <li *ngFor="let item of items; let i = index">
+                      {{ i + 1 }}. {{ item }}
+                    </li>
+                  </ul>
+              </div>
+    
+        </div>
+
+    </div>
+
+
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-secondary" role="alert">
+          <h6> 3.ngSwitch: Conditionally displays one element among many based on matching a value to different cases.</h6>
+          </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+
+                <div [ngStyle]="{'background-color': bgColor || 'white', 'height': '100px', 'width': '100%'}">
+                    <p>The background color of this div changes based on your selection.</p>
+                  </div>
+    
+                <div [ngSwitch]="bgColor">
+                    <div *ngSwitchCase="'red'">Red color is selected.</div>
+                    <div *ngSwitchCase="'blue'" >Blue color is selected.</div>
+                    <div *ngSwitchCase="'green'">Green color is selected.</div>
+                    <div *ngSwitchDefault>Default color is selected.</div>
+                  </div>
+                  
+                  <select [(ngModel)]="bgColor">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="">Default</option>
+                  </select>
+              </div>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+    </div>
