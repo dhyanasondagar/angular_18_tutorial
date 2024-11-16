@@ -84,13 +84,37 @@
 
 
 <div class="row">
-<div class="col-lg-4">
+<div class="col-lg-3">
     <input type="text" class="form-control" [(ngModel)]="courseName">
 </div>
 
-<div class="col-lg-4">
+<div class="col-lg-3">
+<select [(ngModel)]="stateCity" >
+    <option value="" >Select</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Pune">Pune</option>
+    <option value="Banglore">Banglore</option>
+
+</select>
+</div>
+
+
+<div class="col-lg-3">
+    <select class="custom-select custom-select-sm" [(ngModel)]="nameofStudent">
+        <option selected>Select</option>
+        <option value="Reena">Reena</option>
+        <option value="Dhyana">Dhyana</option>
+        <option value="Jiyansh">Jiyansh</option>
+      </select>
+</div>
+
+<div class="col-lg-3">
+    <input type="text" [(ngModel)]="nameofStudent" class="me-2">
+    <input type="checkbox" [(ngModel)]="isIndian" >: {{isIndian}}
+
 
 </div>
+
 
 
 <hr class="mt-3">
@@ -99,9 +123,23 @@
 
 
 
+<div class="row">
+    <div class="col-lg-12 my-3">
+        <div class="alert alert-primary" role="alert">
+          <p class="fw-bold mb-0">signal   firstName = signal("Rakesh");
+        </p> 
+          </div>
+    </div>
+    </div>
+
+<div class="col-lg-6">
+    <div [class]="bgClass()">signal just like a variable</div>
+        <div>   output is:  {{firstName()}}</div>
+
+    <button class="btn btn-primary" (click)="chnageFirstName()" type="button">Change Name by signal</button>
 
 
-
+</div>
 
 
 
