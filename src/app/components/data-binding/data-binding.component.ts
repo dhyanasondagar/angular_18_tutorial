@@ -21,6 +21,7 @@ export class DataBindingComponent {
   stateCity: string = "Banglore";
   nameofStudent: string = "Reena";
   firstName = signal("Rakesh");
+  
 bgClass = signal("bg-danger text-white p-3 mb-3")
 
 constructor(){}
